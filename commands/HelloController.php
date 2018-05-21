@@ -38,7 +38,7 @@ class HelloController extends Controller
     public function actionCron()
     {
         if (!Processing::parsingCategories()) {
-            if (!Processing::DetailedParsing(20)) {
+            if (!Processing::DetailedParsing(40)) {
                 if (!Processing::Branding()) {
                     if (!Processing::ConvertSizes(100)) {
                         if (!Processing::Render()) {

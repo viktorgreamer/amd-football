@@ -180,7 +180,7 @@ class Products extends \yii\db\ActiveRecord
 
     public static function renderSize($text)
     {
-        return "<span class=\"badge badge-primary\"><b>" . $text . "</b></span>";
+        return "<span class=\"badge\" style='background-color: #0b58a2'><b>" . $text . "</b></span>";
     }
 
     public static function renderSizes($array)
@@ -417,10 +417,9 @@ class Products extends \yii\db\ActiveRecord
 
                 break;
 
-            case  3: // 3k
+            case  3: // 2k
                 $tree = str_get_html($response);
                 foreach ($tree->find('div.product') as $div_product) {
-
                     $product = new Products();
                     if ($test) $product->test = 1;
                     $product->id_category = $category->id;
@@ -433,6 +432,8 @@ class Products extends \yii\db\ActiveRecord
                     preg_match("/\/(\d+)\/\z/", $div_product_a_name->href, $output_array);
                     $product->id_in_source = $output_array[1];
                     $product->status_source = Products::SOURCE_ACTIVE;
+
+                    d::alert("strong.old-price ".$div_product->find("strong.old-price", 0)->plaintext);
                     $product->price_old = Parsing::ExtractNumders($div_product->find("strong.old-price", 0)->plaintext);
                     if ($product->price_old) {
                         D::echor(" ЕСТЬ СТАРАЯ ЦЕНА");

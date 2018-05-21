@@ -90,8 +90,17 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'brand_text',
             // 'color',
             'articul',
-            'price',
-            'price_old',
+            [
+                'label' => 'Цена',
+                'format' => 'raw',
+                'value' => function ($model) {
+                    $body = $model->price;
+                    if ($model->price_old) $body .= "<br><del><h4 class = 'text-danger'>" . $model->price_old . "</h4></del>";
+                    return $body;
+
+                }
+            ],
+
             [
                 'label' => "images",
                 'format' => 'raw',
@@ -127,8 +136,8 @@ $this->params['breadcrumbs'][] = $this->title;
                                 'id' => $model->id,
                                 'value' => 1
                             ]]);
-                        if ($model->sizes) $body .= "SIZES " . \app\models\Products::renderSizes(explode(";", $model->sizes));
-                        if ($model->sizes_rus) $body .= "<hr>SIZES_RUS " . \app\models\Products::renderSizes(explode(";", $model->sizes_rus));
+                        if ($model->sizes) $body .= "SIZES<br> " . \app\models\Products::renderSizes(explode(";", $model->sizes));
+                        if ($model->sizes_rus) $body .= "<hr>EXP_SIZES<br> " . \app\models\Products::renderSizes(explode(";", $model->sizes_rus));
 
                     } else $body = Html::a('НЕТ', null, [
                         'class' => "btn btn-danger btn-xs set-attr-value",

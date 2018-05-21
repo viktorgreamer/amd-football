@@ -85,7 +85,7 @@ class Parsing
 
     }
 
-    public function doit($category, $subcategory = 0, $test = false)
+    public static function doit($category, $subcategory = 0, $test = false)
     {
 
         switch ($category->id_source) {
@@ -610,6 +610,14 @@ class Parsing
                     $product->sizes = implode(";", $sizes);
                     // D::dump($sizes);
                     D::info(" РАЗМЕРНОСТЬ " . $pq_size);
+                 //   d::alert("strong.old-price ".$tree->find("strong.old-price", 0)->plaintext);
+                    $product->price_old = Parsing::ExtractNumders($tree->find("strong.old-price", 0)->plaintext);
+                    if ($product->price_old) {
+                        D::echor(" ЕСТЬ СТАРАЯ ЦЕНА");
+                    }
+
+                    $product->price = Parsing::ExtractNumders($tree->find("strong.price", 0)->plaintext);
+
                     D::echor("РАЗМЕРЫ" . Products::renderSizes(explode(";", $product->sizes)));
                     if (preg_match("/XXXS|XXS|XXL|XXXL|XXXXL/", $product->sizes)) {
                         $product->sizes = Clothessize::PREG_REPLACE($product->sizes);
