@@ -1,0 +1,16 @@
+https://www.sportdepo.ru/gallery/dp7007875b.jpeg полная картинка
+\
+
+
+/gallery/dp7007875b_80x80.jpeg не полная
+
+
+//*[@id="product_main"]/div[3]/div[2]/div/div[1]/ul
+
+#product_main > div.product_img > div.preview > div > div.jcarousel-clip.jcarousel-clip-horizontal > ul
+
+
+https://www.sportdepo.ru/gallery/dpgm0003540b.jpeg
+
+
+dpgm0003540b

@@ -1,0 +1,10 @@
+RewriteEngine On RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+AddDefaultCharset utf-8
+RewriteRule . index.php
+<FilesMatch "\.(css|otf|eot|woff|woff2|ttf|svg|csv)$|^$">
+Order deny,allow
+Allow from all
+</FilesMatch>

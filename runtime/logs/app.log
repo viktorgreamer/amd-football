@@ -1,0 +1,665 @@
+2018-05-18 14:20:04 [127.0.0.1][1][v5bd8hej5b2oabok1m06k7bag6][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'a0086640_amd-sportru.auth_assignment' doesn't exist' in E:\Openserver\domains\football\vendor\yiisoft\yii2\db\Command.php:915
+Stack trace:
+#0 E:\Openserver\domains\football\vendor\yiisoft\yii2\db\Command.php(915): PDOStatement->execute()
+#1 E:\Openserver\domains\football\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 E:\Openserver\domains\football\vendor\yiisoft\yii2\db\Query.php(213): yii\db\Command->queryAll()
+#3 E:\Openserver\domains\football\vendor\yiisoft\yii2\rbac\DbManager.php(706): yii\db\Query->all(Object(yii\db\Connection))
+#4 E:\Openserver\domains\football\vendor\yiisoft\yii2\rbac\DbManager.php(123): yii\rbac\DbManager->getAssignments(1)
+#5 E:\Openserver\domains\football\vendor\yiisoft\yii2\web\User.php(706): yii\rbac\DbManager->checkAccess(1, '/site/index', Array)
+#6 E:\Openserver\domains\football\vendor\mdmsoft\yii2-admin\components\Helper.php(119): yii\web\User->can('/site/index', Array)
+#7 E:\Openserver\domains\football\vendor\mdmsoft\yii2-admin\components\AccessControl.php(70): mdm\admin\components\Helper::checkRoute('/site/index', Array, Object(yii\web\User))
+#8 E:\Openserver\domains\football\vendor\yiisoft\yii2\base\ActionFilter.php(75): mdm\admin\components\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#9 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#10 E:\Openserver\domains\football\vendor\yiisoft\yii2\base\Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#11 E:\Openserver\domains\football\vendor\yiisoft\yii2\base\Module.php(676): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#12 E:\Openserver\domains\football\vendor\yiisoft\yii2\base\Controller.php(144): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#13 E:\Openserver\domains\football\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('', Array)
+#14 E:\Openserver\domains\football\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('', Array)
+#15 E:\Openserver\domains\football\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 E:\Openserver\domains\football\web\index.php(17): yii\base\Application->run()
+#17 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'a0086640_amd-sportru.auth_assignment' doesn't exist
+The SQL being executed was: SELECT * FROM `auth_assignment` WHERE `user_id`='1'' in E:\Openserver\domains\football\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 E:\Openserver\domains\football\vendor\yiisoft\yii2\db\Command.php(930): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 E:\Openserver\domains\football\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#2 E:\Openserver\domains\football\vendor\yiisoft\yii2\db\Query.php(213): yii\db\Command->queryAll()
+#3 E:\Openserver\domains\football\vendor\yiisoft\yii2\rbac\DbManager.php(706): yii\db\Query->all(Object(yii\db\Connection))
+#4 E:\Openserver\domains\football\vendor\yiisoft\yii2\rbac\DbManager.php(123): yii\rbac\DbManager->getAssignments(1)
+#5 E:\Openserver\domains\football\vendor\yiisoft\yii2\web\User.php(706): yii\rbac\DbManager->checkAccess(1, '/site/index', Array)
+#6 E:\Openserver\domains\football\vendor\mdmsoft\yii2-admin\components\Helper.php(119): yii\web\User->can('/site/index', Array)
+#7 E:\Openserver\domains\football\vendor\mdmsoft\yii2-admin\components\AccessControl.php(70): mdm\admin\components\Helper::checkRoute('/site/index', Array, Object(yii\web\User))
+#8 E:\Openserver\domains\football\vendor\yiisoft\yii2\base\ActionFilter.php(75): mdm\admin\components\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#9 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#10 E:\Openserver\domains\football\vendor\yiisoft\yii2\base\Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#11 E:\Openserver\domains\football\vendor\yiisoft\yii2\base\Module.php(676): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#12 E:\Openserver\domains\football\vendor\yiisoft\yii2\base\Controller.php(144): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#13 E:\Openserver\domains\football\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('', Array)
+#14 E:\Openserver\domains\football\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('', Array)
+#15 E:\Openserver\domains\football\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 E:\Openserver\domains\football\web\index.php(17): yii\base\Application->run()
+#17 {main}
+Additional Information:
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'a0086640_amd-sportru.auth_assignment' doesn't exist
+)
+
+2018-05-18 14:20:03 [127.0.0.1][1][v5bd8hej5b2oabok1m06k7bag6][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.1975318202.1521292240'
+    '_ym_uid' => '1521292240963533285'
+    '__utmz' => '3745063.1522444577.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '_csrf' => '5d6ee6a15308e5368f6cdc79f2f30bb4d018625db56ef5b2ef44c19aa1ac9473a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"‚_}é,zg‘œg`@	ß•‡¹E(Ê¢®{§Gh \";}'
+    '_identity' => '55ce850c238970ef38b00b17bd53cfef9703a7453103c0900e5194e1c24a34bfa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[3,\"XXwm0MaK4Bg3AV7BLM8pXEMe082SOGaj\",2592000]\";}'
+    'PHPSESSID' => 'v5bd8hej5b2oabok1m06k7bag6'
+    'arp_scroll_position' => '438.3999938964844'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'football'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_DNT' => '1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,es;q=0.6'
+    'HTTP_COOKIE' => '_ga=GA1.1.1975318202.1521292240; _ym_uid=1521292240963533285; __utmz=3745063.1522444577.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _csrf=5d6ee6a15308e5368f6cdc79f2f30bb4d018625db56ef5b2ef44c19aa1ac9473a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%82_%7D%E9%14%01%2Czg%91%9Cg%60%40%09%DF%95%87%9D%B9E%28%CA%A2%AE%7B%A7%11%08Gh+%22%3B%7D; _identity=55ce850c238970ef38b00b17bd53cfef9703a7453103c0900e5194e1c24a34bfa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22XXwm0MaK4Bg3AV7BLM8pXEMe082SOGaj%22%2C2592000%5D%22%3B%7D; PHPSESSID=v5bd8hej5b2oabok1m06k7bag6; arp_scroll_position=438.3999938964844'
+    'PATH' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\ext;e:\\openserver\\modules\\php\\PHP-5.6-x64\\pear;e:\\openserver\\modules\\php\\PHP-5.6-x64\\pear\\bin;e:\\openserver\\modules\\php\\PHP-5.6-x64;e:\\openserver\\modules\\wget\\bin;e:\\openserver\\modules\\database\\MySQL-5.6\\bin;e:\\openserver\\modules\\http\\Apache-2.4-x64\\bin;e:\\openserver\\modules\\http\\Apache-2.4-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'football'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/Openserver/domains/football'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/Openserver/domains/football'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'E:/Openserver/domains/football/web/index.php'
+    'REMOTE_PORT' => '22902'
+    'REDIRECT_URL' => '/'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1526642403.418
+    'REQUEST_TIME' => 1526642403
+    'argv' => []
+    'argc' => 0
+]
+2018-05-18 14:27:51 [-][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'm160312_050000_create_user' not found' in E:\Openserver\domains\football\vendor\yiisoft\yii2\console\controllers\MigrateController.php:186
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2018-05-18 14:27:47 [-][-][-][info][application] $_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'ANSICON' => '192x32766 (192x43)'
+    'ANSICON_DEF' => '7'
+    'APPDATA' => 'C:\\Users\\Admin\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'HP'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'ConEmuANSI' => 'ON'
+    'ConEmuAnsiLog' => ''
+    'ConEmuArgs' => '/Single'
+    'ConEmuArgs2' => ''
+    'ConEmuBackHWND' => '0x000203E6'
+    'ConEmuBaseDir' => 'E:\\openserver\\modules\\conemu\\ConEmu'
+    'ConEmuBaseDirShort' => 'E:\\Openserver\\modules\\conemu\\ConEmu'
+    'ConEmuBuild' => '171109'
+    'ConEmuCfgDir' => 'E:\\openserver\\modules\\conemu'
+    'ConEmuConfig' => ''
+    'ConEmuDir' => 'E:\\openserver\\modules\\conemu'
+    'ConEmuDrawHWND' => '0x00020386'
+    'ConEmuDrive' => 'E:'
+    'ConEmuHooks' => 'Enabled'
+    'ConEmuHWND' => '0x000B0378'
+    'ConEmuPalette' => '<ConEmu>'
+    'ConEmuPID' => '1340'
+    'ConEmuPrompt0' => '$E[m$E[32m$E]9;8;\"USERNAME\"$E\\@$E]9;8;\"COMPUTERNAME\"$E\\$S'
+    'ConEmuPrompt1' => '$E[m$E[32m$E]9;8;\"USERNAME\"$E\\@$E]9;8;\"COMPUTERNAME\"$E\\$S$E[92m$P$E[90m'
+    'ConEmuPrompt2' => '$_$E[90m$G'
+    'ConEmuPrompt3' => '$E[m$S$E]9;12$E\\'
+    'ConEmuServerPID' => '3328'
+    'ConEmuTask' => '{Shells::cmd}'
+    'ConEmuWorkDir' => 'e:\\openserver'
+    'ConEmuWorkDrive' => 'e:'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOME' => 'e:\\openserver'
+    'HOMEDRIVE' => 'e:'
+    'HOMEPATH' => '\\openserver'
+    'LOCALAPPDATA' => 'C:\\Users\\Admin\\AppData\\Local'
+    'LOGONSERVER' => '\\\\HP'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OPENSSL_CONF' => 'e:\\openserver\\modules\\http\\Apache-2.4-x64\\conf\\openssl.cnf'
+    'OS' => 'Windows_NT'
+    'Path' => 'E:\\openserver\\modules\\conemu\\ConEmu\\Scripts;E:\\openserver\\modules\\conemu;E:\\openserver\\modules\\conemu\\ConEmu;e:\\openserver\\modules\\php\\PHP-5.6-x64\\ext;e:\\openserver\\modules\\php\\PHP-5.6-x64\\pear;e:\\openserver\\modules\\php\\PHP-5.6-x64\\pear\\bin;e:\\openserver\\modules\\php\\PHP-5.6-x64;e:\\openserver\\modules\\wget\\bin;e:\\openserver\\modules\\database\\MySQL-5.6\\bin;e:\\openserver\\modules\\http\\Apache-2.4-x64\\bin;e:\\openserver\\modules\\http\\Apache-2.4-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHPBIN' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\php.exe'
+    'PHPDIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\'
+    'PHPRC' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64'
+    'PHP_BIN' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\php.exe'
+    'PHP_BINARY' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\php.exe'
+    'PHP_BINDIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\'
+    'PHP_COMMAND' => 'php.exe'
+    'PHP_DIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\'
+    'PHP_INI' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\php.ini'
+    'PHP_PEAR_BIN_DIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\PEAR'
+    'PHP_PEAR_DATA_DIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\PEAR\\data'
+    'PHP_PEAR_DOC_DIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\PEAR\\docs'
+    'PHP_PEAR_INSTALL_DIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\PEAR\\pear'
+    'PHP_PEAR_PHP_BIN' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\php.exe'
+    'PHP_PEAR_SYSCONF_DIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\PEAR'
+    'PHP_PEAR_TEST_DIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\PEAR\\tests'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'AMD64 Family 22 Model 48 Stepping 1, AuthenticAMD'
+    'PROCESSOR_LEVEL' => '22'
+    'PROCESSOR_REVISION' => '3001'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$E[m$E[32m$E]9;8;\"USERNAME\"$E\\@$E]9;8;\"COMPUTERNAME\"$E\\$S$E[92m$P$E[90m$_$E[90m$G$E[m$S$E]9;12$E\\'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'e:\\openserver\\userdata\\temp'
+    'TMP' => 'e:\\openserver\\userdata\\temp'
+    'USERDOMAIN' => 'HP'
+    'USERDOMAIN_ROAMINGPROFILE' => 'HP'
+    'USERNAME' => 'Admin'
+    'USERPROFILE' => 'C:\\Users\\Admin'
+    'windir' => 'C:\\Windows'
+    'YII_PATH' => 'e:\\Openserver\\domains\\football\\'
+    'PHP_SELF' => 'e:\\Openserver\\domains\\football\\yii'
+    'SCRIPT_NAME' => 'e:\\Openserver\\domains\\football\\yii'
+    'SCRIPT_FILENAME' => 'e:\\Openserver\\domains\\football\\yii'
+    'PATH_TRANSLATED' => 'e:\\Openserver\\domains\\football\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1526642867.8332
+    'REQUEST_TIME' => 1526642867
+    'argv' => [
+        0 => 'e:\\Openserver\\domains\\football\\yii'
+        1 => 'migrate/down'
+    ]
+    'argc' => 2
+]
+2018-05-18 14:31:27 [-][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'm160312_050000_create_user' not found' in E:\Openserver\domains\football\vendor\yiisoft\yii2\console\controllers\MigrateController.php:186
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2018-05-18 14:31:23 [-][-][-][info][application] $_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'ANSICON' => '192x32766 (192x43)'
+    'ANSICON_DEF' => '7'
+    'APPDATA' => 'C:\\Users\\Admin\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'HP'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'ConEmuANSI' => 'ON'
+    'ConEmuAnsiLog' => ''
+    'ConEmuArgs' => '/Single'
+    'ConEmuArgs2' => ''
+    'ConEmuBackHWND' => '0x000203E6'
+    'ConEmuBaseDir' => 'E:\\openserver\\modules\\conemu\\ConEmu'
+    'ConEmuBaseDirShort' => 'E:\\Openserver\\modules\\conemu\\ConEmu'
+    'ConEmuBuild' => '171109'
+    'ConEmuCfgDir' => 'E:\\openserver\\modules\\conemu'
+    'ConEmuConfig' => ''
+    'ConEmuDir' => 'E:\\openserver\\modules\\conemu'
+    'ConEmuDrawHWND' => '0x00020386'
+    'ConEmuDrive' => 'E:'
+    'ConEmuHooks' => 'Enabled'
+    'ConEmuHWND' => '0x000B0378'
+    'ConEmuPalette' => '<ConEmu>'
+    'ConEmuPID' => '1340'
+    'ConEmuPrompt0' => '$E[m$E[32m$E]9;8;\"USERNAME\"$E\\@$E]9;8;\"COMPUTERNAME\"$E\\$S'
+    'ConEmuPrompt1' => '$E[m$E[32m$E]9;8;\"USERNAME\"$E\\@$E]9;8;\"COMPUTERNAME\"$E\\$S$E[92m$P$E[90m'
+    'ConEmuPrompt2' => '$_$E[90m$G'
+    'ConEmuPrompt3' => '$E[m$S$E]9;12$E\\'
+    'ConEmuServerPID' => '3328'
+    'ConEmuTask' => '{Shells::cmd}'
+    'ConEmuWorkDir' => 'e:\\openserver'
+    'ConEmuWorkDrive' => 'e:'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOME' => 'e:\\openserver'
+    'HOMEDRIVE' => 'e:'
+    'HOMEPATH' => '\\openserver'
+    'LOCALAPPDATA' => 'C:\\Users\\Admin\\AppData\\Local'
+    'LOGONSERVER' => '\\\\HP'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OPENSSL_CONF' => 'e:\\openserver\\modules\\http\\Apache-2.4-x64\\conf\\openssl.cnf'
+    'OS' => 'Windows_NT'
+    'Path' => 'E:\\openserver\\modules\\conemu\\ConEmu\\Scripts;E:\\openserver\\modules\\conemu;E:\\openserver\\modules\\conemu\\ConEmu;e:\\openserver\\modules\\php\\PHP-5.6-x64\\ext;e:\\openserver\\modules\\php\\PHP-5.6-x64\\pear;e:\\openserver\\modules\\php\\PHP-5.6-x64\\pear\\bin;e:\\openserver\\modules\\php\\PHP-5.6-x64;e:\\openserver\\modules\\wget\\bin;e:\\openserver\\modules\\database\\MySQL-5.6\\bin;e:\\openserver\\modules\\http\\Apache-2.4-x64\\bin;e:\\openserver\\modules\\http\\Apache-2.4-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHPBIN' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\php.exe'
+    'PHPDIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\'
+    'PHPRC' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64'
+    'PHP_BIN' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\php.exe'
+    'PHP_BINARY' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\php.exe'
+    'PHP_BINDIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\'
+    'PHP_COMMAND' => 'php.exe'
+    'PHP_DIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\'
+    'PHP_INI' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\php.ini'
+    'PHP_PEAR_BIN_DIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\PEAR'
+    'PHP_PEAR_DATA_DIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\PEAR\\data'
+    'PHP_PEAR_DOC_DIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\PEAR\\docs'
+    'PHP_PEAR_INSTALL_DIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\PEAR\\pear'
+    'PHP_PEAR_PHP_BIN' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\php.exe'
+    'PHP_PEAR_SYSCONF_DIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\PEAR'
+    'PHP_PEAR_TEST_DIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\PEAR\\tests'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'AMD64 Family 22 Model 48 Stepping 1, AuthenticAMD'
+    'PROCESSOR_LEVEL' => '22'
+    'PROCESSOR_REVISION' => '3001'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$E[m$E[32m$E]9;8;\"USERNAME\"$E\\@$E]9;8;\"COMPUTERNAME\"$E\\$S$E[92m$P$E[90m$_$E[90m$G$E[m$S$E]9;12$E\\'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'e:\\openserver\\userdata\\temp'
+    'TMP' => 'e:\\openserver\\userdata\\temp'
+    'USERDOMAIN' => 'HP'
+    'USERDOMAIN_ROAMINGPROFILE' => 'HP'
+    'USERNAME' => 'Admin'
+    'USERPROFILE' => 'C:\\Users\\Admin'
+    'windir' => 'C:\\Windows'
+    'YII_PATH' => 'e:\\Openserver\\domains\\football\\'
+    'PHP_SELF' => 'e:\\Openserver\\domains\\football\\yii'
+    'SCRIPT_NAME' => 'e:\\Openserver\\domains\\football\\yii'
+    'SCRIPT_FILENAME' => 'e:\\Openserver\\domains\\football\\yii'
+    'PATH_TRANSLATED' => 'e:\\Openserver\\domains\\football\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1526643083.4905
+    'REQUEST_TIME' => 1526643083
+    'argv' => [
+        0 => 'e:\\Openserver\\domains\\football\\yii'
+        1 => 'migrate/redo'
+        2 => '--migrationPath=@yii/rbac/migrations'
+    ]
+    'argc' => 3
+]
+2018-05-18 14:32:52 [-][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'm160312_050000_create_user' not found' in E:\Openserver\domains\football\vendor\yiisoft\yii2\console\controllers\MigrateController.php:186
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2018-05-18 14:32:48 [-][-][-][info][application] $_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'ANSICON' => '192x32766 (192x43)'
+    'ANSICON_DEF' => '7'
+    'APPDATA' => 'C:\\Users\\Admin\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'HP'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'ConEmuANSI' => 'ON'
+    'ConEmuAnsiLog' => ''
+    'ConEmuArgs' => '/Single'
+    'ConEmuArgs2' => ''
+    'ConEmuBackHWND' => '0x000203E6'
+    'ConEmuBaseDir' => 'E:\\openserver\\modules\\conemu\\ConEmu'
+    'ConEmuBaseDirShort' => 'E:\\Openserver\\modules\\conemu\\ConEmu'
+    'ConEmuBuild' => '171109'
+    'ConEmuCfgDir' => 'E:\\openserver\\modules\\conemu'
+    'ConEmuConfig' => ''
+    'ConEmuDir' => 'E:\\openserver\\modules\\conemu'
+    'ConEmuDrawHWND' => '0x00020386'
+    'ConEmuDrive' => 'E:'
+    'ConEmuHooks' => 'Enabled'
+    'ConEmuHWND' => '0x000B0378'
+    'ConEmuPalette' => '<ConEmu>'
+    'ConEmuPID' => '1340'
+    'ConEmuPrompt0' => '$E[m$E[32m$E]9;8;\"USERNAME\"$E\\@$E]9;8;\"COMPUTERNAME\"$E\\$S'
+    'ConEmuPrompt1' => '$E[m$E[32m$E]9;8;\"USERNAME\"$E\\@$E]9;8;\"COMPUTERNAME\"$E\\$S$E[92m$P$E[90m'
+    'ConEmuPrompt2' => '$_$E[90m$G'
+    'ConEmuPrompt3' => '$E[m$S$E]9;12$E\\'
+    'ConEmuServerPID' => '3328'
+    'ConEmuTask' => '{Shells::cmd}'
+    'ConEmuWorkDir' => 'e:\\openserver'
+    'ConEmuWorkDrive' => 'e:'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOME' => 'e:\\openserver'
+    'HOMEDRIVE' => 'e:'
+    'HOMEPATH' => '\\openserver'
+    'LOCALAPPDATA' => 'C:\\Users\\Admin\\AppData\\Local'
+    'LOGONSERVER' => '\\\\HP'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OPENSSL_CONF' => 'e:\\openserver\\modules\\http\\Apache-2.4-x64\\conf\\openssl.cnf'
+    'OS' => 'Windows_NT'
+    'Path' => 'E:\\openserver\\modules\\conemu\\ConEmu\\Scripts;E:\\openserver\\modules\\conemu;E:\\openserver\\modules\\conemu\\ConEmu;e:\\openserver\\modules\\php\\PHP-5.6-x64\\ext;e:\\openserver\\modules\\php\\PHP-5.6-x64\\pear;e:\\openserver\\modules\\php\\PHP-5.6-x64\\pear\\bin;e:\\openserver\\modules\\php\\PHP-5.6-x64;e:\\openserver\\modules\\wget\\bin;e:\\openserver\\modules\\database\\MySQL-5.6\\bin;e:\\openserver\\modules\\http\\Apache-2.4-x64\\bin;e:\\openserver\\modules\\http\\Apache-2.4-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHPBIN' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\php.exe'
+    'PHPDIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\'
+    'PHPRC' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64'
+    'PHP_BIN' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\php.exe'
+    'PHP_BINARY' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\php.exe'
+    'PHP_BINDIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\'
+    'PHP_COMMAND' => 'php.exe'
+    'PHP_DIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\'
+    'PHP_INI' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\php.ini'
+    'PHP_PEAR_BIN_DIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\PEAR'
+    'PHP_PEAR_DATA_DIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\PEAR\\data'
+    'PHP_PEAR_DOC_DIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\PEAR\\docs'
+    'PHP_PEAR_INSTALL_DIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\PEAR\\pear'
+    'PHP_PEAR_PHP_BIN' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\php.exe'
+    'PHP_PEAR_SYSCONF_DIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\PEAR'
+    'PHP_PEAR_TEST_DIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\PEAR\\tests'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'AMD64 Family 22 Model 48 Stepping 1, AuthenticAMD'
+    'PROCESSOR_LEVEL' => '22'
+    'PROCESSOR_REVISION' => '3001'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$E[m$E[32m$E]9;8;\"USERNAME\"$E\\@$E]9;8;\"COMPUTERNAME\"$E\\$S$E[92m$P$E[90m$_$E[90m$G$E[m$S$E]9;12$E\\'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'e:\\openserver\\userdata\\temp'
+    'TMP' => 'e:\\openserver\\userdata\\temp'
+    'USERDOMAIN' => 'HP'
+    'USERDOMAIN_ROAMINGPROFILE' => 'HP'
+    'USERNAME' => 'Admin'
+    'USERPROFILE' => 'C:\\Users\\Admin'
+    'windir' => 'C:\\Windows'
+    'YII_PATH' => 'e:\\Openserver\\domains\\football\\'
+    'PHP_SELF' => 'e:\\Openserver\\domains\\football\\yii'
+    'SCRIPT_NAME' => 'e:\\Openserver\\domains\\football\\yii'
+    'SCRIPT_FILENAME' => 'e:\\Openserver\\domains\\football\\yii'
+    'PATH_TRANSLATED' => 'e:\\Openserver\\domains\\football\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1526643168.8044
+    'REQUEST_TIME' => 1526643168
+    'argv' => [
+        0 => 'e:\\Openserver\\domains\\football\\yii'
+        1 => 'migrate/redo'
+        2 => '--migrationPath=@yii/rbac/migrations'
+    ]
+    'argc' => 3
+]
+2018-05-18 14:34:04 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'user' already exists' in E:\Openserver\domains\football\vendor\yiisoft\yii2\db\Command.php:842
+Stack trace:
+#0 E:\Openserver\domains\football\vendor\yiisoft\yii2\db\Command.php(842): PDOStatement->execute()
+#1 E:\Openserver\domains\football\vendor\yiisoft\yii2\db\Migration.php(288): yii\db\Command->execute()
+#2 E:\Openserver\domains\football\migrations\m180518_113228_create_user_table.php(28): yii\db\Migration->createTable('user', Array, 'CHARACTER SET u...')
+#3 E:\Openserver\domains\football\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(671): m180518_113228_create_user_table->up()
+#4 E:\Openserver\domains\football\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->migrateUp('m180518_113228_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 E:\Openserver\domains\football\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#7 E:\Openserver\domains\football\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 E:\Openserver\domains\football\vendor\yiisoft\yii2\console\Controller.php(128): yii\base\Controller->runAction('', Array)
+#9 E:\Openserver\domains\football\vendor\yiisoft\yii2\base\Module.php(523): yii\console\Controller->runAction('', Array)
+#10 E:\Openserver\domains\football\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#11 E:\Openserver\domains\football\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#12 E:\Openserver\domains\football\vendor\yiisoft\yii2\base\Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 E:\Openserver\domains\football\yii(25): yii\base\Application->run()
+#14 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'user' already exists
+The SQL being executed was: CREATE TABLE `user` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`username` varchar(255) NOT NULL UNIQUE,
+	`auth_key` varchar(32) NOT NULL,
+	`password_hash` varchar(255) NOT NULL,
+	`password_reset_token` varchar(255) UNIQUE,
+	`email` varchar(255) NOT NULL UNIQUE,
+	`status` smallint(6) NOT NULL DEFAULT 10,
+	`created_at` int(11) NOT NULL,
+	`updated_at` int(11) NOT NULL
+) CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB' in E:\Openserver\domains\football\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 E:\Openserver\domains\football\vendor\yiisoft\yii2\db\Command.php(852): yii\db\Schema->convertException(Object(PDOException), 'CREATE TABLE `u...')
+#1 E:\Openserver\domains\football\vendor\yiisoft\yii2\db\Migration.php(288): yii\db\Command->execute()
+#2 E:\Openserver\domains\football\migrations\m180518_113228_create_user_table.php(28): yii\db\Migration->createTable('user', Array, 'CHARACTER SET u...')
+#3 E:\Openserver\domains\football\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(671): m180518_113228_create_user_table->up()
+#4 E:\Openserver\domains\football\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(183): yii\console\controllers\BaseMigrateController->migrateUp('m180518_113228_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 E:\Openserver\domains\football\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#7 E:\Openserver\domains\football\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 E:\Openserver\domains\football\vendor\yiisoft\yii2\console\Controller.php(128): yii\base\Controller->runAction('', Array)
+#9 E:\Openserver\domains\football\vendor\yiisoft\yii2\base\Module.php(523): yii\console\Controller->runAction('', Array)
+#10 E:\Openserver\domains\football\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#11 E:\Openserver\domains\football\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#12 E:\Openserver\domains\football\vendor\yiisoft\yii2\base\Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 E:\Openserver\domains\football\yii(25): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42S01
+    [1] => 1050
+    [2] => Table 'user' already exists
+)
+
+2018-05-18 14:34:02 [-][-][-][info][application] $_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'ANSICON' => '192x32766 (192x43)'
+    'ANSICON_DEF' => '7'
+    'APPDATA' => 'C:\\Users\\Admin\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'HP'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'ConEmuANSI' => 'ON'
+    'ConEmuAnsiLog' => ''
+    'ConEmuArgs' => '/Single'
+    'ConEmuArgs2' => ''
+    'ConEmuBackHWND' => '0x000203E6'
+    'ConEmuBaseDir' => 'E:\\openserver\\modules\\conemu\\ConEmu'
+    'ConEmuBaseDirShort' => 'E:\\Openserver\\modules\\conemu\\ConEmu'
+    'ConEmuBuild' => '171109'
+    'ConEmuCfgDir' => 'E:\\openserver\\modules\\conemu'
+    'ConEmuConfig' => ''
+    'ConEmuDir' => 'E:\\openserver\\modules\\conemu'
+    'ConEmuDrawHWND' => '0x00020386'
+    'ConEmuDrive' => 'E:'
+    'ConEmuHooks' => 'Enabled'
+    'ConEmuHWND' => '0x000B0378'
+    'ConEmuPalette' => '<ConEmu>'
+    'ConEmuPID' => '1340'
+    'ConEmuPrompt0' => '$E[m$E[32m$E]9;8;\"USERNAME\"$E\\@$E]9;8;\"COMPUTERNAME\"$E\\$S'
+    'ConEmuPrompt1' => '$E[m$E[32m$E]9;8;\"USERNAME\"$E\\@$E]9;8;\"COMPUTERNAME\"$E\\$S$E[92m$P$E[90m'
+    'ConEmuPrompt2' => '$_$E[90m$G'
+    'ConEmuPrompt3' => '$E[m$S$E]9;12$E\\'
+    'ConEmuServerPID' => '3328'
+    'ConEmuTask' => '{Shells::cmd}'
+    'ConEmuWorkDir' => 'e:\\openserver'
+    'ConEmuWorkDrive' => 'e:'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOME' => 'e:\\openserver'
+    'HOMEDRIVE' => 'e:'
+    'HOMEPATH' => '\\openserver'
+    'LOCALAPPDATA' => 'C:\\Users\\Admin\\AppData\\Local'
+    'LOGONSERVER' => '\\\\HP'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OPENSSL_CONF' => 'e:\\openserver\\modules\\http\\Apache-2.4-x64\\conf\\openssl.cnf'
+    'OS' => 'Windows_NT'
+    'Path' => 'E:\\openserver\\modules\\conemu\\ConEmu\\Scripts;E:\\openserver\\modules\\conemu;E:\\openserver\\modules\\conemu\\ConEmu;e:\\openserver\\modules\\php\\PHP-5.6-x64\\ext;e:\\openserver\\modules\\php\\PHP-5.6-x64\\pear;e:\\openserver\\modules\\php\\PHP-5.6-x64\\pear\\bin;e:\\openserver\\modules\\php\\PHP-5.6-x64;e:\\openserver\\modules\\wget\\bin;e:\\openserver\\modules\\database\\MySQL-5.6\\bin;e:\\openserver\\modules\\http\\Apache-2.4-x64\\bin;e:\\openserver\\modules\\http\\Apache-2.4-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHPBIN' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\php.exe'
+    'PHPDIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\'
+    'PHPRC' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64'
+    'PHP_BIN' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\php.exe'
+    'PHP_BINARY' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\php.exe'
+    'PHP_BINDIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\'
+    'PHP_COMMAND' => 'php.exe'
+    'PHP_DIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\'
+    'PHP_INI' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\php.ini'
+    'PHP_PEAR_BIN_DIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\PEAR'
+    'PHP_PEAR_DATA_DIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\PEAR\\data'
+    'PHP_PEAR_DOC_DIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\PEAR\\docs'
+    'PHP_PEAR_INSTALL_DIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\PEAR\\pear'
+    'PHP_PEAR_PHP_BIN' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\php.exe'
+    'PHP_PEAR_SYSCONF_DIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\PEAR'
+    'PHP_PEAR_TEST_DIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\PEAR\\tests'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'AMD64 Family 22 Model 48 Stepping 1, AuthenticAMD'
+    'PROCESSOR_LEVEL' => '22'
+    'PROCESSOR_REVISION' => '3001'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$E[m$E[32m$E]9;8;\"USERNAME\"$E\\@$E]9;8;\"COMPUTERNAME\"$E\\$S$E[92m$P$E[90m$_$E[90m$G$E[m$S$E]9;12$E\\'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'e:\\openserver\\userdata\\temp'
+    'TMP' => 'e:\\openserver\\userdata\\temp'
+    'USERDOMAIN' => 'HP'
+    'USERDOMAIN_ROAMINGPROFILE' => 'HP'
+    'USERNAME' => 'Admin'
+    'USERPROFILE' => 'C:\\Users\\Admin'
+    'windir' => 'C:\\Windows'
+    'YII_PATH' => 'e:\\Openserver\\domains\\football\\'
+    'PHP_SELF' => 'e:\\Openserver\\domains\\football\\yii'
+    'SCRIPT_NAME' => 'e:\\Openserver\\domains\\football\\yii'
+    'SCRIPT_FILENAME' => 'e:\\Openserver\\domains\\football\\yii'
+    'PATH_TRANSLATED' => 'e:\\Openserver\\domains\\football\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1526643242.2241
+    'REQUEST_TIME' => 1526643242
+    'argv' => [
+        0 => 'e:\\Openserver\\domains\\football\\yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-05-18 14:36:02 [-][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'm180518_113228_create_user_table' not found' in E:\Openserver\domains\football\vendor\yiisoft\yii2\console\controllers\MigrateController.php:186
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2018-05-18 14:35:57 [-][-][-][info][application] $_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'ANSICON' => '192x32766 (192x43)'
+    'ANSICON_DEF' => '7'
+    'APPDATA' => 'C:\\Users\\Admin\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'HP'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'ConEmuANSI' => 'ON'
+    'ConEmuAnsiLog' => ''
+    'ConEmuArgs' => '/Single'
+    'ConEmuArgs2' => ''
+    'ConEmuBackHWND' => '0x000203E6'
+    'ConEmuBaseDir' => 'E:\\openserver\\modules\\conemu\\ConEmu'
+    'ConEmuBaseDirShort' => 'E:\\Openserver\\modules\\conemu\\ConEmu'
+    'ConEmuBuild' => '171109'
+    'ConEmuCfgDir' => 'E:\\openserver\\modules\\conemu'
+    'ConEmuConfig' => ''
+    'ConEmuDir' => 'E:\\openserver\\modules\\conemu'
+    'ConEmuDrawHWND' => '0x00020386'
+    'ConEmuDrive' => 'E:'
+    'ConEmuHooks' => 'Enabled'
+    'ConEmuHWND' => '0x000B0378'
+    'ConEmuPalette' => '<ConEmu>'
+    'ConEmuPID' => '1340'
+    'ConEmuPrompt0' => '$E[m$E[32m$E]9;8;\"USERNAME\"$E\\@$E]9;8;\"COMPUTERNAME\"$E\\$S'
+    'ConEmuPrompt1' => '$E[m$E[32m$E]9;8;\"USERNAME\"$E\\@$E]9;8;\"COMPUTERNAME\"$E\\$S$E[92m$P$E[90m'
+    'ConEmuPrompt2' => '$_$E[90m$G'
+    'ConEmuPrompt3' => '$E[m$S$E]9;12$E\\'
+    'ConEmuServerPID' => '3328'
+    'ConEmuTask' => '{Shells::cmd}'
+    'ConEmuWorkDir' => 'e:\\openserver'
+    'ConEmuWorkDrive' => 'e:'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOME' => 'e:\\openserver'
+    'HOMEDRIVE' => 'e:'
+    'HOMEPATH' => '\\openserver'
+    'LOCALAPPDATA' => 'C:\\Users\\Admin\\AppData\\Local'
+    'LOGONSERVER' => '\\\\HP'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OPENSSL_CONF' => 'e:\\openserver\\modules\\http\\Apache-2.4-x64\\conf\\openssl.cnf'
+    'OS' => 'Windows_NT'
+    'Path' => 'E:\\openserver\\modules\\conemu\\ConEmu\\Scripts;E:\\openserver\\modules\\conemu;E:\\openserver\\modules\\conemu\\ConEmu;e:\\openserver\\modules\\php\\PHP-5.6-x64\\ext;e:\\openserver\\modules\\php\\PHP-5.6-x64\\pear;e:\\openserver\\modules\\php\\PHP-5.6-x64\\pear\\bin;e:\\openserver\\modules\\php\\PHP-5.6-x64;e:\\openserver\\modules\\wget\\bin;e:\\openserver\\modules\\database\\MySQL-5.6\\bin;e:\\openserver\\modules\\http\\Apache-2.4-x64\\bin;e:\\openserver\\modules\\http\\Apache-2.4-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHPBIN' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\php.exe'
+    'PHPDIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\'
+    'PHPRC' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64'
+    'PHP_BIN' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\php.exe'
+    'PHP_BINARY' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\php.exe'
+    'PHP_BINDIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\'
+    'PHP_COMMAND' => 'php.exe'
+    'PHP_DIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\'
+    'PHP_INI' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\php.ini'
+    'PHP_PEAR_BIN_DIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\PEAR'
+    'PHP_PEAR_DATA_DIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\PEAR\\data'
+    'PHP_PEAR_DOC_DIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\PEAR\\docs'
+    'PHP_PEAR_INSTALL_DIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\PEAR\\pear'
+    'PHP_PEAR_PHP_BIN' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\php.exe'
+    'PHP_PEAR_SYSCONF_DIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\PEAR'
+    'PHP_PEAR_TEST_DIR' => 'e:\\openserver\\modules\\php\\PHP-5.6-x64\\PEAR\\tests'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'AMD64 Family 22 Model 48 Stepping 1, AuthenticAMD'
+    'PROCESSOR_LEVEL' => '22'
+    'PROCESSOR_REVISION' => '3001'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$E[m$E[32m$E]9;8;\"USERNAME\"$E\\@$E]9;8;\"COMPUTERNAME\"$E\\$S$E[92m$P$E[90m$_$E[90m$G$E[m$S$E]9;12$E\\'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'e:\\openserver\\userdata\\temp'
+    'TMP' => 'e:\\openserver\\userdata\\temp'
+    'USERDOMAIN' => 'HP'
+    'USERDOMAIN_ROAMINGPROFILE' => 'HP'
+    'USERNAME' => 'Admin'
+    'USERPROFILE' => 'C:\\Users\\Admin'
+    'windir' => 'C:\\Windows'
+    'YII_PATH' => 'e:\\Openserver\\domains\\football\\'
+    'PHP_SELF' => 'e:\\Openserver\\domains\\football\\yii'
+    'SCRIPT_NAME' => 'e:\\Openserver\\domains\\football\\yii'
+    'SCRIPT_FILENAME' => 'e:\\Openserver\\domains\\football\\yii'
+    'PATH_TRANSLATED' => 'e:\\Openserver\\domains\\football\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1526643357.6848
+    'REQUEST_TIME' => 1526643357
+    'argv' => [
+        0 => 'e:\\Openserver\\domains\\football\\yii'
+        1 => 'migrate/redo'
+        2 => '--migrationPath=@yii/rbac/migrations'
+    ]
+    'argc' => 3
+]
